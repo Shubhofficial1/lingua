@@ -78,3 +78,44 @@
     @apply font-semibold text-[18px] text-white;
   }
 }
+
+@layer components {
+  /* Auth text field card */
+  .auth-field {
+    @apply h-[76px] justify-center rounded-[20px] border border-border bg-white px-5;
+  }
+  .auth-field__label {
+    @apply font-regular text-[13px] text-text-secondary;
+  }
+  .auth-field__input {
+    @apply p-0 font-medium text-[17px] text-text-primary;
+  }
+
+  /* Social auth button */
+  .social-btn {
+    @apply h-[68px] flex-row items-center rounded-[20px] border border-border bg-white px-6;
+  }
+  .social-btn__icon {
+    @apply w-9 items-center justify-center;
+  }
+  .social-btn__label {
+    @apply ml-6 font-medium text-[17px] text-text-primary;
+  }
+
+  /* Verification code boxes */
+  .otp-box {
+    @apply h-14 w-12 items-center justify-center rounded-2xl border border-border bg-surface;
+  }
+  .otp-box--active {
+    @apply border-primary-deep bg-white;
+  }
+  .otp-box__digit {
+    @apply font-bold text-[24px] text-text-primary;
+  }
+}
+
+@layer components {
+  .btn-primary--disabled {
+    @apply opacity-40;
+  }
+}

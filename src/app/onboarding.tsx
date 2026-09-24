@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -27,6 +28,8 @@ function SpeechBubble({
 }
 
 export default function Onboarding() {
+  const router = useRouter();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#ffffff" }}>
       <View className="flex-1 px-7">
@@ -84,7 +87,10 @@ export default function Onboarding() {
         <View className="flex-1" />
 
         {/* Get Started */}
-        <Pressable className="btn-primary mb-4 px-6 active:opacity-90">
+        <Pressable
+          className="btn-primary mb-4 px-6 active:opacity-90"
+          onPress={() => router.push("/sign-up")}
+        >
           <Text className="btn-primary__label flex-1 text-center">
             Get Started
           </Text>
