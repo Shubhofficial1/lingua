@@ -23,6 +23,12 @@
   --color-surface: #f6f7fb;
   --color-background: #ffffff;
 
+  --color-bubble-blue: #eaf3ff;
+  --color-bubble-purple: #f1f0ff;
+  --color-bubble-red: #ffeee9;
+  --color-bubble-purple-text: #3b2fe0;
+  --color-bubble-red-text: #ff5a3c;
+
   --font-regular: "Poppins-Regular";
   --font-medium: "Poppins-Medium";
   --font-semibold: "Poppins-SemiBold";
@@ -51,5 +57,24 @@
   }
   .body-sm {
     @apply font-regular text-[13px] leading-[21px] text-text-secondary;
+  }
+
+  /* Speech bubble */
+  .bubble {
+    @apply absolute rounded-[18px] px-5 py-3;
+  }
+  .bubble__text {
+    @apply font-medium text-[17px] leading-[24px];
+  }
+  .bubble__tail {
+    @apply absolute -bottom-1 h-4 w-4 rotate-45 rounded-[3px];
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply h-16 flex-row items-center justify-center rounded-[20px] bg-primary-deep;
+  }
+  .btn-primary__label {
+    @apply font-semibold text-[18px] text-white;
   }
 }
